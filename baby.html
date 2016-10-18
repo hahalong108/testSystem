@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>密码强度表示</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+  <script type="text/javascript">
+
+function loop(){
+	var arr=[];
+	for(var i=0;i<10;i++){
+      arr[i]=function(){
+      	return i;
+      };
+	}
+	alert(arr);
+};
+loop();
+
+
+function loop1(){
+	var arr=[];
+	for(var i=0;i<10;i++){
+      arr[i]=(function(n){
+      	return n;
+      })(i);
+	}
+	alert(arr);
+};
+loop1();
+
+
+function loop2(){
+	var arr=[];
+	for(var i=0;i<10;i++){
+      arr[i]=(function(n){
+      	
+      	return function(){
+      		return n;
+      	}
+      })(i);
+	}
+	alert(arr);
+};
+loop2();
+
+
+   
+  </script>
+</head>
+<body>
+</body>
+</html>
